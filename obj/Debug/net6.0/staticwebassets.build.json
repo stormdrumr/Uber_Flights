@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OsDrJ/pOVtzxhIOmgPKn0iiTLfQTQQpYUbhpjje3qsc=",
+  "Source": "Uber_Flights",
+  "BasePath": "_content/Uber_Flights",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

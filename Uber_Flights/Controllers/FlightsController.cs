@@ -28,11 +28,11 @@ namespace Uber_Flights.Controllers
         public async Task<ActionResult<IEnumerable<Flight>>> GetFlights()
         {
 
-          //if (_context.Flights == null)
-          //{
-          //    return NotFound();
-          //}
-          //  return await _context.Flights.ToListAsync();
+            if (_context.Flights == null)
+            {
+                return NotFound();
+            }
+            return await _context.Flights.ToListAsync();
         }
 
         // GET: api/Flights/5

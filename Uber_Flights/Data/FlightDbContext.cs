@@ -14,10 +14,11 @@ namespace Uber_Flights.Data
         public DbSet<Passenger> Passengers { get; set; }
 
 
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-          
-
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Passenger>().ToTable("Passenger");
+            modelBuilder.Entity<FlightBooking>().ToTable("FlightBooking");
+            modelBuilder.Entity<Flight>().ToTable("Flight");
+        }
     }
 }

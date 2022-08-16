@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Flight(s)</h1>
+    <table class="table-borderded table-striped">
+        <thead>
+            <tr>
+                <th>Flight ID</th>
+                <th>Flight Number</th>
+                <th>Destination</th>
+                <th>Departure Airport</th>
+                <th>Departure Time</th>
+                <th>Arrival Airport</th>
+                <th>Arrival Time</th>
+                <th>Max Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fDef of fDefs">
+                <td>{{fDef.flightID}}</td>
+                <td>{{fDef.flightNumber}}</td>
+                <td>{{fDef.destination}}</td>
+                <td>{{fDef.departureAirport}}</td>
+                <td>{{fDef.departureTime}}</td>
+                <td>{{fDef.arrivalAirport}}</td>
+                <td>{{fDef.arrivalTime}}</td>
+                <td>{{fDef.maxCapacity}}</td>
+            </tr>
+        </tbody>
+    </table>>
+</div>

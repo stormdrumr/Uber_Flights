@@ -27,11 +27,12 @@ namespace Uber_Flights.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Flight>>> GetFlights()
         {
-          if (_context.Flights == null)
-          {
-              return NotFound();
-          }
-            return await _context.Flights.ToListAsync();
+
+          //if (_context.Flights == null)
+          //{
+          //    return NotFound();
+          //}
+          //  return await _context.Flights.ToListAsync();
         }
 
         // GET: api/Flights/5
@@ -68,8 +69,9 @@ namespace Uber_Flights.Controllers
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, "An error occurred while attempting to update the flight information.");
                 if (!FlightExists(id))
                 {
                     return NotFound();

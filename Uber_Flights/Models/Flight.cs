@@ -6,20 +6,19 @@ namespace Uber_Flights.Models
     public class Flight
     {
         public int flightID { get; set; }
-        public string FlightNumber { get; set; }
-        public string Destination { get; set; }
-        public DateTime DepartureTime { get; set; }
-        public DateTime ArrivalTime { get; set; }
-        public string DepartureAirport { get; set; }
-        public string ArrivalAirport { get; set; }
-        public int MaxCapacity { get; set; }
-        public int PassengerID { get; set; }
+        public string flightNumber { get; set; }
+        public string destination { get; set; }
+        public DateTime departureTime { get; set; }
+        public DateTime arrivalTime { get; set; }
+        public string departureAirport { get; set; }
+        public string arrivalAirport { get; set; }
+        public int maxCapacity { get; set; }
 
         //Count of all passengers on the flight to be used with MaxCapacity
-        public int PassengerCount => BookedPassengers?.Count ?? 0;
+        public int passengerCount => bookedPassengers?.Count ?? 0;
 
         //Collection of passengers that would be on a particular flight
-        public virtual ICollection<Passenger> BookedPassengers { get; set; }
+        public virtual ICollection<Passenger> bookedPassengers { get; set; }
 
 
 

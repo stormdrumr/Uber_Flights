@@ -7,7 +7,6 @@ const routes: Routes = [
   {path: '', redirectTo: 'passenger/index', pathMatch: 'full'},
   {path: 'passenger/index', component: IndexComponent},
   {path: 'passenger/create', component: CreateComponent}
-
 ];
 
 @NgModule({

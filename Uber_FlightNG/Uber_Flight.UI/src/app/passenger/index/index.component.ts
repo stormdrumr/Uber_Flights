@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PassengerService } from '../passenger.service';
+import { PassengerDef } from '../passenger-def';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+pDefs: PassengerDef[] = [];
+
+  constructor(private passengerService: PassengerService) { }
 
   ngOnInit(): void {
+    this.loadPassengers();
   }
+
+loadPassengers():void {
+  this.passengerService.getPassengers().subscribe(pDefs => this.pDefs = pDefs);
+}
 
 }

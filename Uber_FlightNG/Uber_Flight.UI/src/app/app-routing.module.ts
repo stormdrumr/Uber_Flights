@@ -4,8 +4,9 @@ import { IndexComponent } from './flight/index/index.component';
 
 const routes: Routes = [
   {path: 'flight', redirectTo: 'flight/index', pathMatch: 'full'},
-  {path: 'flight/index', component: IndexComponent}
-];
+  {path: 'flight/index', component: IndexComponent},
+  {path: 'passenger/index', component: IndexComponent}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
